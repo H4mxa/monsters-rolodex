@@ -1,11 +1,12 @@
 import React from 'react'
+import Card from './Card'
 import './card-list.styles.css'
 
 function CardList({ monsters }) {
   return (
     <div className="card-list">
-      {monsters.map((element, index) => (
-        <h1 key={index}>{element.name}</h1>
+      {monsters.map((monster) => (
+        <Card key={monster.id} monster={monster} />
       ))}
     </div>
   )
